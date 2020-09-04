@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
-    "bundlewatch": "yarn run bundlewatch --max-size 100kb ./dist/main.js"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
