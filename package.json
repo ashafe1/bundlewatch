@@ -1,5 +1,13 @@
 {
   "name": "webpack-react-tutorial",
+  "bundlewatch": {
+    "files": [
+      {
+        "path": "./dist/*.js",
+        "maxSize": "100kB"
+      }
+    ]
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
