@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         env:
-          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCHTOKEN }}
+          BUNDLEWATCH_GITHUB_TOKEN: 7d8607a3d99d07fe74cd36d46e40f018c33f88eb
           CI_REPO_OWNER: ${{ github.repository_owner }}
           CI_REPO_NAME: ${{ github.repository }}
           CI_COMMIT_SHA: ${{ github.sha }}
