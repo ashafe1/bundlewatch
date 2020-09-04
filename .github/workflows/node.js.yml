@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         env:
-          BUNDLEWATCH_GITHUB_TOKEN: e466db9fd09e24fe590fc41bbccca46d72a1034f
+          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCHTOKEN }}
           CI_REPO_OWNER: ${{ github.repository_owner }}
           CI_REPO_NAME: ${{ github.repository }}
           CI_COMMIT_SHA: ${{ github.sha }}
@@ -31,4 +31,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run build --if-present
-      - run: npm run bundlewatch
+      - run: yarn run bundlewatch --max-size 100kb ./dist/main.js
